@@ -1,0 +1,30 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Bienvenido/a</mat-card-title>
+            <mat-card-subtitle>Introduce tus credenciales para acceder</mat-card-subtitle>
+
+        </mat-card-header>
+
+
+        <form class="example-form" [formGroup]="loginForm" *ngIf="loginForm">
+            <mat-card-content>
+                <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+                    <mat-label>Usuario</mat-label>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput formControlName="email" type="email" placeholder="Usuario">
+                    </mat-form-field>
+                    <br>
+                </div>
+                <br>
+                <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="10px">
+                    <mat-label>Contraseña</mat-label>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <input matInput type="password" formControlName="password" placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </mat-card-content>
+            <button mat-raised-button color="primary" class="btn-block" (click)="loginUser()">Acceder</button>
+        </form>
+    </mat-card>
+</div>
